@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  	<meta name="description" content="MDMT Demo">
+    
+    <title>MDMT Demo by Dr. Minjung Shim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="./css/float-grid.css" rel="stylesheet" type="text/css" />
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header role='banner' class='banner'>
+      <div class='row'> 
+        <div id='js-main' class='col-12'>
+          <section id='js-top-link' class="top al_left"><a id='js-login-link' href='tmp.html'>Need Help!</a></section>
+
+          <p class='font_el ind_l mg_top' id='js-name-main'>Hi Anthony!</BR>Ready to <span class='font_eel'>Dance?</span></BR></p>
+          <p class='font_m ind_l mg_top'>What do you want to do today?</p>
+          <button type="submit" class="btn_black ind_l">Live Meeting</button>&nbsp;&nbsp;&nbsp;
+          <button type="submit" class="btn_black">Online Class</button>&nbsp;&nbsp;&nbsp;
+          <button type="submit" class="btn_black">Survey</button>
+          <div class='mg_top'></div> <!-- add extra space -->
+        </div>
+      </div>
+    </header>
+    <section class='login hidden' id="js-signup" role="region" aria-live='polite'>                  
+      <div class="form">
+          <legend class='font_m'>Sign up</legend>
+          <form method="post">
+              <fieldset name="signup">                
+                <label for="username-s">Username</br></label>
+                <input value="" type="text" name="username" id="username-s" class="inp" minlength="5" placeholder="" required />
+                <label for="fname-s">First Name</label>
+                <input value="" type="text" name="fname" id="fname-s" class="inp" placeholder="" required />
+                <label for="lname-s">Last Name</label>
+                <input value="" type="text" name="lname" id="lname-s" class="inp" placeholder="" required />
+                <label for="password">Password</label>
+                <input value="" type="password" name="password" id="password" class="inp" minlength="5" required />
+                <label for="password2">Repeat Password</label>
+                <input value="" type="password" name="password2" id="password2" class="inp" minlength="5" required />
+              </fieldset>
+              <button type="submit" class="button inp">Sign up</button>
+          </form>
+          <div>
+            <p class="ban_desc al_center">Already have an account? <a id="js-login-link2" href="">Sign In</a></p>
+            <p class="line_sp"></p> <!--exptra line space-->
+          </div>
+      </div>
+    </section>
+    <section class='login hidden' id="js-login" role="region" aria-live='polite'>                  
+        <div class="form">
+            <legend class='font_m'>Sign In</legend>
+            <form method="post">
+                <fieldset name="login">
+                    <label value="demo" for="username-l">Username</label>
+                    <input type="text" name="username" id="username-l" class="inp" placeholder="" required />
+                    <label for="password-l">Password</label>
+                    <input value="guest" type="password" name="password" id="password-l" class="inp" required />
+                    <!-- Demo Account: demo/guest -->
+                </fieldset>
+                <button type="submit" class="button inp">Sign In</button>
+            </form>
+            <div>
+              <p class="ban_desc al_center">Don't have an account?</BR>Please contact <a href='mailto:minjung.shim@gmail.com' id='js-signup-link'>Dr. Shim</a></p>
+              <p class="line_sp"></p> <!--exptra line space-->
+            </div>
+        </div>
+    </section>
+    <div id='js-popup-bg' class='dark hidden'></div>
+    <section class='popup hidden' id="js-popup" role="region">                  
+        <div id='js-err-title' class='font_l green'>message title</div></br>
+        <div id='js-err-message' class='font_m mg0'>message goes here</div>
+        <div id='js-btn'></div>
+    </section>
+      
+    <main class='main_bg' role='main'>
+      <div class='row'> 
+        <div class='col-12'>
+          <section id='' class='' role='regional' aria-live='polite'>
+            <p id='' class='font_l ind_l float'>Messages to Anthony</p>
+            <!-- <a id='' class='clr link_bot' href>Go to Your list ></a> -->
+            <!-- <div class='clr'></div> -->
+            <!-- <p class="line_sp"></p>  -->
+            <ul id='' class='al_center' aria-live='polite'>
+              <ul id="js-ul" class="al_center" aria-live="polite"><li class="li_main">
+                <div class="w2 li_title">&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+                <div class="w3 li_title">Message</div>
+                <div class="w1"><a id="" class="thin" href=""> </a></div>
+            </li>
+            <li class="li_main">
+                <div class="w2"><div><img width=30 src="./img/circle-check.svg" alt="checked"></div>
+                &nbsp; Jun 13, 2020</div>
+                <div class="w3">You have a Live Meeting scheduled at 2PM tomorrow</div>
+                <div class="w1"><a id="" class="thin" href="tmp.html">View Detail &gt;</a></div>
+            </li>
+            <li class="li_main">
+              <div class="w2"><div><img width=30 src="./img/circle-check.svg" alt="checked"></div>
+              &nbsp; Jun 11, 2020</div>
+              <div class="w3">Please complete Survey by Friday (Jun 12, 2020)</div>
+              <div class="w1"><a id="" class="thin" href="tmp.html">Go to Survey &gt;</a></div>
+           </li></ul>
+            </ul>
+            <p id='' class='font_l ind_l float'>Replay</p>
+            <a id='' class='clr link_bot' href='tmp.html'>Complete List ></a>
+
+            <div id='js-demo-note' class='ind_l line_sp'>
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ghSp3T039vE"  -->
+    
+              <iframe width="900" height="515" src="https://player.vimeo.com/video/399771453" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id='js-demo-note' class='ind_l line_sp'><font color=red>* The replay video is just a placeholer and not related to MDMT program</font></div>
+            <p class="mg_top"></p> 
+          </section>
+
+          <!--List landing page-->
+          <!-- <section id='js-list' class='hidden' role='regional' aria-live='polite'>
+            <p id='js-list-title' class='font_l ind_l float'>Announcements</p>
+            <a id='js-all-list-link' class='clr link_bot' href>Go to Your list ></a>
+            <p class="line_sp"></p> 
+            <ul id='js-ul' class='al_center' aria-live='polite'>
+            </ul>
+            
+            <div id='js-demo-note' class='ind_l line_sp'>* Currently this app is set to allow all users to view the list for demo purpose.</div>
+            <p class="mg_top"></p> 
+          </section>
+          <section id='js-detail' class='ind_l mg_top hidden' role='regional' aria-live='polite'>
+          </section>
+          <section id='js-post' class='hidden' role='regional' aria-live='polite'>
+          </section> -->
+        </div>
+      </div>
+    </main>
+    <div id='js-demo-note' class='copy_right'>© 2020 Dr. Minjung Shim All Rights Reserved</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script>
+    <script type="text/javascript" src="./js/render.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+
+  </body>
+</html>
