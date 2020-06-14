@@ -383,3 +383,12 @@ a:focus  {
   margin-top: 4.7rem;
   margin-left: 1.8rem;
 }
+
+.link_img {
+  opacity: 0.6;
+}
+
+.link_img:hover {
+  outline: none;
+  opacity: 0.9;
+}
