@@ -49,8 +49,9 @@ function renderInitial(id) {
 function renderMessage(id) {
   const memberRecord = MEMBER_A.find(member => member.id === id);
   const message = memberRecord ? [...memberRecord?.message, ...GROUP_A?.group_message] : [...GROUP_A?.group_message, ...GROUP_A?.nonmember_message];
-  
-  if (message.length === 0) {
+  const filteredMessage = message.filter(item => item.show?.toLowerCase() === "yes");
+
+  if (filteredMessage.length === 0) {
     $('#js-message').append(`
         <li class="li_main">
           <div class="w2"></div>
@@ -61,7 +62,7 @@ function renderMessage(id) {
     return;
   }
 
-  $('#js-message').append(message.filter(item => item.show?.toLowerCase() === "yes").map(message => `
+  $('#js-message').append(filteredMessage.map(message => `
     <li class="li_main">
     <div class="w2"><div><img class='green_fill' width=30 src="./img/success.svg" title="checked"></div>
       &nbsp; ${message.date}</div>
@@ -179,14 +180,3 @@ $(_=> {
   if (GROUP_A.showDailyPractice.toLowerCase() === "yes")  renderDailyPractice();
   if (COMMON.id === id) renderAdmin();
 });
-
-// 0e1c
-// 4669
-// d40a
-// faae
-// 3c7c
-// 8098
-// fe9a
-// 23cc
-// b1e7
-// 020b

@@ -113,23 +113,9 @@ const MEMBER_A = [
     ],
   },
   {
-    name: "Tom Cruise",
-    id: "23cc", 
-    image: "m2",
-    absence: [],
-    message: [
-      {
-        show: "no",
-        date: "Apr 30, 2022",
-        message: "This is a personal message",
-        link: "",
-      },
-    ],
-  },
-  {
     name: "Harrison Ford",
     id: "b1e7", 
-    image: "m1",
+    image: "m2",
     absence: [],
     message: [
       {
@@ -154,5 +140,18 @@ const MEMBER_A = [
       },
     ],
   },
-
+  {
+    name: "Tom Cruise",
+    id: "23cc", 
+    image: "m1",
+    absence: [],
+    message: [
+      {
+        show: "yes",
+        date: "Apr 30, 2022",
+        message: "This is a personal message",
+        link: "",
+      },
+    ],
+  },
 ];

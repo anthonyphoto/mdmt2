@@ -12,7 +12,7 @@ const COMMON = {
   header3: "Let's have some fun today",
 
   // Zoom Link
-  zoomLink: "https://zoom.us/",
+  zoomLink: "https://www.cnn.com/",
 
   // Contact info for Help
   phone: "215-333-1234",
