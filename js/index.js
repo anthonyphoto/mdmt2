@@ -123,7 +123,7 @@ function renderFutureMeetings() {
   const listLength = $('#js-future-meetings').attr("cnt");
   const updatedList = listLength === "1" ? [ list[0] ] : list;
 
-  $('#js-full-list').text(listLength === "1" ? `Full List (${list.length} Left) >` : 'Next Metting >');
+  $('#js-full-list').text(listLength === "1" ? `Full List (${list.length} Left) >` : 'Next Meeting >');
 
   $('#js-future-meetings').append(updatedList.map(session => `
       <li class="li_main">

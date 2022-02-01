@@ -4,7 +4,7 @@
 const COMMON = {
 
   // Title shown on the browser tab, not in content
-  title: "MD/MT Research", 
+  title: "Mindful Moving Study", 
   
   // Default header content - font is big - do not make it too long
   header1: "Hi",
@@ -15,8 +15,8 @@ const COMMON = {
   zoomLink: "https://www.cnn.com/",
 
   // Contact info for Help
-  phone: "215-333-1234",
-  email: "minjung@gmail.com",
+  phone: "215-496-9650",
+  email: "mbmresearch@drexel.edu",
 
   // admin id
   id: "admin",
@@ -32,7 +32,7 @@ const GROUP_A = {
     { 
       show: "yes",
       date: "Apr 25, 2022",
-      message: "Reminder: You have a Live Class scheduled at 2PM tomorrow.",
+      message: "Reminder: You have a Live Class scheduled for Tuesday, April 25th at 10am.",
       link: "https://zoom.us/",
     },
     {

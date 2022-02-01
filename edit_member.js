@@ -4,7 +4,7 @@
 const MEMBER_A = [
   {
     name: "Anthony Kim",
-    id: "0e1c", 
+    id: "demo1", 
     image: "m1",
     absence: [1, 2, 5],
     message: [
@@ -24,7 +24,7 @@ const MEMBER_A = [
   },
   {
     name: "Minjung Shim",
-    id: "4669", 
+    id: "demo2", 
     image: "f1",
     absence: [],
     message: [
@@ -147,7 +147,7 @@ const MEMBER_A = [
     absence: [],
     message: [
       {
-        show: "yes",
+        show: "no",
         date: "Apr 30, 2022",
         message: "This is a personal message",
         link: "",
