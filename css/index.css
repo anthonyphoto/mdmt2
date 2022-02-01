@@ -40,8 +40,19 @@ body {
   padding-right: 1rem;
 }
 
+.bg_m1 {
+  background: url('../img/m1.jpg');
+}
+
+.bg_m2 {
+  background: url('../img/m2.jpg');
+}
+
+.bg_f1 {
+  background: url('../img/f1.jpg');
+}
+
 .banner {
-  background: url('../img/background.jpg');  
   background-repeat: no-repeat;
   background-position: right 0 top;
   background-attachment: fixed;
@@ -69,11 +80,12 @@ h2 {
   padding: 0;
 }
 
-.login {
+.help {
   position: absolute;
-  width: 400px;
-  left: calc(50% - 200px);
-  top: 1rem;
+  z-index: 10;
+  /* width: 80%;
+  left: 10%; */
+  top: 10%;
   background-color: #FFF;
   border: 2px solid #e0e0e0;
   margin: 0;
@@ -85,7 +97,7 @@ h2 {
   display: flex;
   flex-flow: column wrap;
   position: fixed;
-  width: 500px;
+  width: 600px;
   left: calc(50% - 250px);
   top: 10%;
   background-color: #FFF;
@@ -93,20 +105,22 @@ h2 {
   padding: 40px 18px 60px 18px;
   justify-content: center;
   text-align: center;
-
 }
+
 .dark{
+  z-index: 1;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .form {
+  top: 10%;
   font-size: 16px;
-  width: 320px;
+  width: 80%;
 }
 fieldset {
   border: none;
@@ -147,6 +161,11 @@ fieldset {
 .button:focus,
 .button:active {
   background-color: #337ab4;
+}
+
+.admin_height {
+  padding-top: 3px;
+  padding-bottom: 4px;
 }
 
 .li_title {
@@ -273,6 +292,7 @@ ul {
   transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
 }
 
+a,
 a:link, 
 a:visited {
   font-size: 1.1rem;
@@ -315,6 +335,18 @@ a:focus  {
 
 .red {
   color: red;
+}
+
+.red_fill {
+  filter: invert(10%) sepia(87%) saturate(5192%) hue-rotate(12deg) brightness(106%) contrast(136%);
+}
+
+.green_fill {
+  filter: invert(51%) sepia(12%) saturate(2266%) hue-rotate(101deg) brightness(100%) contrast(86%);
+}
+
+.gray_fill {
+  filter: invert(90%) sepia(2%) saturate(28%) hue-rotate(111deg) brightness(88%) contrast(87%);
 }
 
 .green {
