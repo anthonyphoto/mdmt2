@@ -41,6 +41,12 @@ const GROUP_A = {
       message: "Please check your email and finish the survey.",
       link: "",
     },  
+    { 
+      show: "yes",
+      date: "Apr 06, 2022",
+      message: "The first class went well. Kudos to all!! &nbsp;&nbsp;&nbsp;&nbsp; <img width='180' src='./img/_praise.gif'>",
+      link: "",
+    },
   ],
 
   // non-member message won't show on individual page
