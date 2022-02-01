@@ -91,7 +91,7 @@ function renderPastMeetings(id) {
         <div class="w2">
         ${absence.includes(session.session) ? `<img class='red_fill' width=30 src="./img/fail.svg" title="You're absent">` : `<img class='green_fill' width=30 src="./img/success.svg" title="checked">`}
         &nbsp; ${session.date}</div>
-          <div class="w3">${absence.includes(session.session) ? "<font color='c00000'>You missed this session.</font>" : "Thank you for your participation!"}</div>
+          <div class="w3">#${session.session} ${absence.includes(session.session) ? "&nbsp;<font color='c00000'>You missed this session.</font>" : "Thank you for your participation!"}</div>
           <div class="w1"><a id="" target='top' class="thin" href="${session.exercise}">${session.exercise ? "Let's Exercise &gt;" : '' }</a></div>
       </li>`));
 }
@@ -103,10 +103,10 @@ function renderFutureMeetings() {
 
   $('#js-future-meetings').html(`
       <li class="li_main">
-      <div class="w2 li_title">&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
-      <div class="w3 li_title">Time</div>
-      <div class="w1"><a id="" class="thin" href=""> </a></div>
-    </li>`);
+        <div class="w2 li_title">&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+        <div class="w3 li_title">Meeting</div>
+        <div class="w1"><a id="" class="thin" href=""> </a></div>
+      </li>`);
 
   if (list.length === 0) {
     $('#js-future-meetings').append(`
@@ -122,14 +122,14 @@ function renderFutureMeetings() {
   const listLength = $('#js-future-meetings').attr("cnt");
   const updatedList = listLength === "1" ? [ list[0] ] : list;
 
-  $('#js-full-list').text(listLength === "1" ? 'Full List >' : 'Next Metting >');
+  $('#js-full-list').text(listLength === "1" ? `Full List (${list.length} Left) >` : 'Next Metting >');
 
   $('#js-future-meetings').append(updatedList.map(session => `
       <li class="li_main">
         <div class="w2">
           <img class='gray_fill' width=30 src="./img/success.svg" title="checked">
         &nbsp; ${session.date}</div>
-          <div class="w3">${session.title}</div>
+          <div class="w3">#${session.session} ${session.title}</div>
           <div class="w1"><a id="" target='top' class="thin" href="${COMMON.zoomLink}">Join Meeting</a></div>
       </li>`));
 }

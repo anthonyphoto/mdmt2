@@ -123,7 +123,7 @@ const GROUP_A = {
     },
     {
       session: 12,
-      date: "Jun 12, 2022",
+      date: "Jun 21, 2022",
       title: "Let's meet at 10am",
       exercise: "https://player.vimeo.com/video/399771453",
     },
