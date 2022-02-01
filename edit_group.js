@@ -32,13 +32,13 @@ const GROUP_A = {
     { 
       show: "yes",
       date: "Apr 25, 2022",
-      message: "Reminder: You have a Live Class scheduled at 2PM tomorrow",
+      message: "Reminder: You have a Live Class scheduled at 2PM tomorrow.",
       link: "https://zoom.us/",
     },
     {
       show: "yes",
       date: "Apr 16, 2022",
-      message: "Please check your email and finish the survey",
+      message: "Please check your email and finish the survey.",
       link: "",
     },  
   ],
