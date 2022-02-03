@@ -25,6 +25,16 @@ body {
   line-height: 1.5rem;
 }
 
+.top_logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drexel_logo {
+  margin-left: -8%;
+  height: 50px;
+}
+
 .main_bg {
   background-color: white;
   max-width: 1200px;
