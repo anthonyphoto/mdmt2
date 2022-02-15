@@ -66,7 +66,7 @@ function renderMessage(id) {
     <li class="li_main">
     <div class="w2"><div><img class='green_fill' width=30 src="./img/success.svg" title="checked"></div>
       &nbsp; ${message.date}</div>
-      <div class="w3">${message.message}</div>
+      <div class="w3 flex_nowrap">${message.pic ? `<img class='emoji' src='./edit-pic/${message.pic}.gif'>` : ''} ${message.message}</div>
       <div class="w1"><a class="thin" target="top" href="${message.link}">${message.link ? `Go to Link &gt;` : ''}</a></div>
     </li>`));
 }
@@ -82,7 +82,7 @@ function renderPastMeetings(id) {
           <div class="w2"></div>
           <div class="w3">The first meeting has not started yet.
           </div>
-          <div class="w1"></div>
+          <div class="w2"></div>
         </li>`);
     return;
   }
@@ -92,8 +92,8 @@ function renderPastMeetings(id) {
         <div class="w2">
         ${absence.includes(session.session) ? `<img class='red_fill' width=30 src="./img/fail.svg" title="You're absent">` : `<img class='green_fill' width=30 src="./img/success.svg" title="checked">`}
         &nbsp; ${session.date}</div>
-          <div class="w3">#${session.session} ${absence.includes(session.session) ? "&nbsp;<font color='c00000'>You missed this session.</font>" : "Thank you for your participation!"}</div>
-          <div class="w1"><a id="" target='top' class="thin" href="${session.exercise}">${session.exercise ? "Let's Exercise &gt;" : '' }</a></div>
+          <div class="w3">#${session.session} ${absence.includes(session.session) ? "&nbsp;<font color='c00000'>You missed this session.</font>" : session.completedTitle }</div>
+          <div class="w2"><a id="" target='top' class="thin" href="${session.link}">${session.link ? `${session.linkTitle} &gt;` : '' }</a></div>
       </li>`));
 }
 
@@ -141,9 +141,9 @@ function renderDailyPractice() {
   const session = schedule.find(item => item.session === sessionIndex);
 
   $('#js-daily').html(`
-    <p id='' class='font_l ind_l float'>Daily Practice #${lastSession}</p>
+    <p id='' class='font_l ind_l float'>#${lastSession} Daily Practice - ${session.linkTitle}</p>
     <div id='js-demo-note' class='ind_l line_sp'>    
-      <iframe class="iframe" src="${session.exercise}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="iframe" src="${session.link}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div id='js-demo-note' class='ind_l'>* The last meeting was held on ${session.date}</div>  
     <p class="mg_top"></p> 
